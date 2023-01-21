@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#">arthuwu</a>
+        <a href="computersci.html">Computer Science</a>
+    </nav>
+    <div class="flex-container-double content">
+        <div class="kontent">  
+            <h1 id="system-architecture">1.1 - System Architecture</h1>
+                <h3 id="architecture-of-the-cpu">1.1.1 Architecture of the CPU</h3>
+                <p>The <strong>purpose</strong> of the Central Processing Unit (CPU) is to</p>
+                <ul>
+                <li>Processss data</li>
+                <li>Carry out instructions</li>
+                </ul>
+                <h4 id="von-neumann-architecture"><strong>Von-Neumann Architecture</strong></h4>
+                <p>Both <strong>instructions and data are stored in the same memory</strong></p>
+                <ul>
+                    <li>Registers are <strong>high-speed, low-capacity storage</strong> locations, which can be special or general purpose, rapid read/write</li>
+                    <li>General Purpose Registers:
+                <ul>
+                <li>Memory Address Register (MAR)
+                <ul>
+                    <li>The <strong>address of the data/instruction</strong> being accessed is temporarily stored here</li>
+                    <li>The address is passed to the RAM via. the address bus</li>
+                </ul>
+                </li>
+                <li>Memory Data Register (MDR)
+                <ul>
+                    <li>During the FDE cycle the data/instruction from the RAM is <strong>temporarily stored in the MDR</strong></li>
+                    <li>Data travels <strong>bi-directionally</strong> via. the data bus<br>
+                Instructions only travel away from RAM (via. the data bus)</li>
+                </ul>
+                </li>
+                <li>Program Counter (PC)
+                <ul>
+                    <li>A register that holds the memory address of the next instruction then passes it to the MAR as the first step of the FDE cycle</li>
+                    <li>All data and instructions in memory (RAM/cache) have a unique and specific address</li>
+                </ul>
+                </li>
+                <li>Accumulator (ACC)
+                <ul>
+                    <li>A register that stores the immediate result of calculations from the ALU (within the ALU)</li>
+                </ul>
+                </li>
+                <li>Current Instruction Register (CIR)
+                <ul>
+                    <li>Splits the instruction received from RAM into:</li>
+                    <li>Opcode: the function e.g. add, minus</li>
+                    <li>Operand: the data e.g. 6, 14</li>
+                    <li>Sends calculations and logic to the ALU<br>
+                    <li>Sends instructions e.g. input/output to the CU</li>
+                </ul>
+                </li>
+                </ul>
+                </li>
+                </ul>
+        </div>
+        <div class="table-of-contents flex-right">
+            <ul class="fixed-position">
+                <li><a class="linkedtext" href="#system-architecture">1.1 - System Architecture</a>
+                    <ul>    
+                    <li><a class="linkedtext" href="#architecture-of-the-cpu">1.1.1 Architecture of the CPU</a></li>
+                        <ul>  
+                        <li><a class="linkedtext" href="#von-neumann-architecture">Von-Neumann Architecture</a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
