@@ -15,64 +15,227 @@
     </nav>
     <div class="flex-container-double content">
         <div class="kontent">  
+            <!-- start pasting here and don't spend 30 minutes debugging like past you -->
             <h1 id="system-architecture">1.1 - System Architecture</h1>
-                <h3 id="architecture-of-the-cpu">1.1.1 Architecture of the CPU</h3>
-                <p>The <strong>purpose</strong> of the Central Processing Unit (CPU) is to</p>
-                <ul>
-                <li>Processss data</li>
-                <li>Carry out instructions</li>
-                </ul>
-                <h4 id="von-neumann-architecture"><strong>Von-Neumann Architecture</strong></h4>
-                <p>Both <strong>instructions and data are stored in the same memory</strong></p>
-                <ul>
-                    <li>Registers are <strong>high-speed, low-capacity storage</strong> locations, which can be special or general purpose, rapid read/write</li>
-                    <li>General Purpose Registers:
-                <ul>
-                <li>Memory Address Register (MAR)
-                <ul>
-                    <li>The <strong>address of the data/instruction</strong> being accessed is temporarily stored here</li>
-                    <li>The address is passed to the RAM via. the address bus</li>
-                </ul>
-                </li>
-                <li>Memory Data Register (MDR)
-                <ul>
-                    <li>During the FDE cycle the data/instruction from the RAM is <strong>temporarily stored in the MDR</strong></li>
-                    <li>Data travels <strong>bi-directionally</strong> via. the data bus<br>
-                Instructions only travel away from RAM (via. the data bus)</li>
-                </ul>
-                </li>
-                <li>Program Counter (PC)
-                <ul>
-                    <li>A register that holds the memory address of the next instruction then passes it to the MAR as the first step of the FDE cycle</li>
-                    <li>All data and instructions in memory (RAM/cache) have a unique and specific address</li>
-                </ul>
-                </li>
-                <li>Accumulator (ACC)
-                <ul>
-                    <li>A register that stores the immediate result of calculations from the ALU (within the ALU)</li>
-                </ul>
-                </li>
-                <li>Current Instruction Register (CIR)
-                <ul>
-                    <li>Splits the instruction received from RAM into:</li>
-                    <li>Opcode: the function e.g. add, minus</li>
-                    <li>Operand: the data e.g. 6, 14</li>
-                    <li>Sends calculations and logic to the ALU<br>
-                    <li>Sends instructions e.g. input/output to the CU</li>
-                </ul>
-                </li>
-                </ul>
-                </li>
-                </ul>
+            <blockquote>
+            <p>Things that are outdated, extra or just incorrect “GCSEisms” will be included in these blockquotes</p>
+            </blockquote>
+            <h2 id="architecture-of-the-cpu">1.1.1 Architecture of the CPU</h2>
+            <p>The <strong>purpose</strong> of the Central Processing Unit (CPU) is</p>
+            <ul>
+            <li>to processss <strong>data</strong></li>
+            <li>to carry out <strong>instructions</strong></li>
+            </ul>
+            <h3 id="von-neumann-architecture"><strong>Von-Neumann Architecture</strong></h3>
+            <blockquote>
+            <p>In GCSE, you do not need to know about other CPU architecures.</p>
+            </blockquote>
+            <ul>
+            <li>Both <strong>instructions and data are stored in the same memory</strong></li>
+            </ul>
+            <blockquote>
+            <p>In contrast, the Harvard architecure uses seperate memory for instructions and data</p>
+            </blockquote>
+            <p>There are several different components in a CPU, including <strong>Registers</strong>, the <strong>Arithmetic Logic Unit (ALU)</strong>, the <strong>Control Unit (CU)</strong>, <strong>buses</strong> and <strong>cache</strong>.</p>
+            <blockquote>
+            <p>There are several more things in modern microarchitechures, e.g. seperate floating point and interger logic, schedulers, sequencers, queues etc.</p>
+            </blockquote>
+            <ul>
+            <li><strong>Registers</strong> are <strong>high-speed, low-capacity</strong> storage locations, which can be special or general purpose.
+            <ul>
+            <li><strong>Memory Address Register (MAR)</strong>
+            <ul>
+            <li>This is where the <strong>address</strong> of the data/instruction <strong>being fetched</strong> is temporarily stored</li>
+            <li>This is passed to the RAM via the <strong>address bus</strong></li>
+            </ul>
+            </li>
+            <li><strong>Memory Data Register (MDR)</strong>
+            <ul>
+            <li>Where the data/instruction <strong>fetched</strong> from the RAM is temporaily stored</li>
+            <li><strong>Data</strong> travels <strong>bi-directionally</strong> via the <strong>data bus</strong></li>
+            <li><strong>Instructions</strong> only travel <strong>away</strong> from the RAM via the data bus</li>
+            <li>
+            <blockquote>
+            <p>also known as the Memory Buffer Register</p>
+            </blockquote>
+            </li>
+            </ul>
+            </li>
+            <li><strong>Program Counter (PC)</strong>
+            <ul>
+            <li>Where the <strong>address of the next data/instruction to be fetched</strong> is held</li>
+            </ul>
+            </li>
+            <li><strong>Accumulator (ACC)</strong>
+            <ul>
+            <li>Where the <strong>results of calculations</strong> from the ALU are stored</li>
+            </ul>
+            </li>
+            <li><strong>Current Instruction Register (CIR)</strong>
+            <ul>
+            <li>Splits the instruction received from RAM into:
+            <ul>
+            <li><strong>opcode</strong>: instructions</li>
+            <li><strong>operand</strong>: data</li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            <li>The <strong>Arithmetic Logic Unit (ALU)</strong> performs <strong>arithmetic</strong> (e.g. +, -, *, /, %, ^) and <strong>logical</strong> operations (AND, OR, NOT)</li>
+            </ul>
+            <blockquote>
+            <p>Fun fact: some basic ARM CPUs cannot do division - they only estimate the answers</p>
+            </blockquote>
+            <ul>
+            <li>The <strong>Control Unit (CU)</strong> “directs” the operations of the CPU. It
+            <ul>
+            <li><strong>decodes</strong> instructions</li>
+            <li>manages the <strong>flow of data</strong> within the CPU and between the CPU and other devices</li>
+            <li>accepts the next instruction</li>
+            <li>contains the <strong>clock</strong>, which is responsible for timing the FDE cycle</li>
+            </ul>
+            </li>
+            <li><strong>Buses</strong> are “wires” which connect two or more components inside the CPU.
+            <ul>
+            <li><strong>Data</strong> bus
+            <ul>
+            <li><strong>Bi-directional</strong></li>
+            <li>Used to transport <strong>data and instructions</strong> between the RAM and the <strong>MDR</strong></li>
+            </ul>
+            </li>
+            <li><strong>Address</strong> bus
+            <ul>
+            <li>From the <strong>CPU to the RAM</strong></li>
+            <li>Used to transport the <strong>address to be fetched</strong> from the <strong>MAR</strong></li>
+            </ul>
+            </li>
+            <li><strong>Control</strong> bus
+            <ul>
+            <li>Bi-directional</li>
+            <li>Used to transmit control signals between the CU and other components, e.g.
+            <ul>
+            <li>Memory read/write</li>
+            <li>Clock</li>
+            <li>Bus requests</li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            <li><strong>Cache</strong> is a type of <strong>high-speed</strong> random access memory (RAM) which is <strong>built into</strong> the processor
+            <ul>
+            <li>Used to <strong>temporarily</strong> hold data and instructions that the <strong>processor is likely to reuse</strong>, to reduce time fetching from RAM</li>
+            <li>There are several “levels” of cache; <strong>L1</strong>, <strong>L2</strong> and <strong>L3</strong>:
+            <ul>
+            <li>In terms of <strong>capacity</strong>, L3 &gt; L2 &gt; L1</li>
+            <li>In terms of <strong>speed</strong>/distance to the cores. L1 &gt; L2 &gt; L3</li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            <h3 id="fetch-decode-execute-cycle"><strong>Fetch-Decode-Execute cycle</strong></h3>
+            <p>The fetch-decode-execute cycle is the <strong>sequence of operations</strong> that are completed by a processor to <strong>execute</strong> an instruction.</p>
+            <ul>
+            <li>Fetch phase:
+            <ul>
+            <li>The address stored in the <strong>program counter (PC)</strong> is <strong>copied</strong> to the <strong>memory address register (MAR)</strong></li>
+            <li>The <strong>PC increments by 1</strong></li>
+            <li>The <strong>random access memory (RAM)</strong> is instructed to <strong>fetch</strong> the instruction stored in the <strong>address in the MAR</strong> via the <strong>address bus</strong></li>
+            <li>The <strong>RAM returns the fetched data</strong> via the <strong>data bus</strong> to the <strong>memory data register (MDR)</strong></li>
+            <li>The value in the <strong>MDR</strong> is <strong>copied</strong> to the <strong>current instruction register (CIR)</strong></li>
+            </ul>
+            </li>
+            <li>Decode phase:
+            <ul>
+            <li>The contents of the <strong>CIR</strong> are <strong>split</strong> into <strong>oprand</strong> (data) and <strong>opcode</strong> (instructions)</li>
+            </ul>
+            </li>
+            <li>Execute phase
+            <ul>
+            <li>The decoded instruction is sent to the <strong>ALU</strong> and/or the <strong>CU</strong> to be <strong>executed</strong></li>
+            <li>The <strong>results</strong> of the ALU are <strong>stored</strong> in the <strong>accumulator</strong></li>
+            </ul>
+            </li>
+            </ul>
+            <h2 id="cpu-performance">1.1.2 CPU performance</h2>
+            <p>There are several factors impacting CPU performance. These include:</p>
+            <ul>
+            <li><strong>Clock speed</strong>
+            <ul>
+            <li>Measured in <strong>hertz (Hz)</strong></li>
+            <li>The number of <strong>instructions</strong> (FDE cycles) <strong>which can be carried out in a second</strong></li>
+            <li>can be increased by the user by <strong>overclocking</strong></li>
+            </ul>
+            </li>
+            </ul>
+            <blockquote>
+            <p>Modern CPUs can process multiple instructions in parallel<br>
+            There are many ways to overclock which aren’t scary e.g. enabling PBO</p>
+            </blockquote>
+            <ul>
+            <li><strong>Cache size</strong>
+            <ul>
+            <li>The larger the cache, the more data can be stored on it, the <strong>less time the processor has to wait for instructions to be fetched</strong></li>
+            </ul>
+            </li>
+            <li><strong>Number of cores</strong>
+            <ul>
+            <li>The more cores a CPU has, the <strong>greater the number of instructions it can process</strong> in a given period of time</li>
+            </ul>
+            </li>
+            </ul>
+            <blockquote>
+            <p>In modern processors, instruction per clock (IPC) is arguably more important than raw clock speed. Thread count, power efficiency and thermal performace may also be import factors to consider.<br>
+            Different microarchitechures also benefit from different factors, e.g. AMD’s Zen line of microarchitechures benefit greately from more/faster cache, while Intel’s recent microarchitechures benefit more from higher clock speed</p>
+            </blockquote>
+            <h2 id="embedded-systems">1.1.3 Embedded Systems</h2>
+            <blockquote>
+            <p>why is this in here? idk ask OCR</p>
+            </blockquote>
+            <p>Embedded systems are <strong>computer systems designed to be built into other electronic devices/appliances to perform a specific function</strong>.<br>
+            Its purpose is to:</p>
+            <ul>
+            <li><strong>Monitor and control</strong> various components in the device</li>
+            <li>Allow a user to <strong>interact</strong> with it</li>
+            </ul>
+            <p>They are usually:</p>
+            <ul>
+            <li><strong>small</strong> in size</li>
+            <li>has <strong>low power consumprion</strong></li>
+            <li><strong>low cost</strong></li>
+            <li><strong>rugged</strong> operating range</li>
+            <li>less processing power</li>
+            </ul>
+            <p>They are not designed to be programmable easily by a user: they run <strong>firmware</strong>, a piece of software installed on <strong>read-only memory</strong> to control the embedded system</p>
+            <p>Examples include:</p>
+            <ul>
+            <li>GPS systems</li>
+            <li>Calculators</li>
+            <li>Domestic appliances</li>
+            <li>Engine Control Units</li>
+            <li>Heating and AC systems</li>
+            <li>Factory equipment</li>
+            <li>Traffic lights</li>
+            <li>etc.</li>
+            </ul>
+            <blockquote>
+            <p>why BIOSes and I/O handling are not included in here i do not know</p>
+            </blockquote>
+            <!-- stop pasting here and don't spend 30 minutes debugging like past you -->
         </div>
         <div class="table-of-contents flex-right">
             <ul class="fixed-position">
-                <li><a class="linkedtext" href="#system-architecture">1.1 - System Architecture</a>
-                    <ul>    
+                    <li><a class="linkedtext" href="#system-architecture">1.1 - System Architecture</a>
+                    <ul>
                     <li><a class="linkedtext" href="#architecture-of-the-cpu">1.1.1 Architecture of the CPU</a></li>
-                        <ul>  
-                        <li><a class="linkedtext" href="#von-neumann-architecture">Von-Neumann Architecture</a></li>
-                </ul>
+                    <li><a class="linkedtext" href="#cpu-performance">1.1.2 CPU performance</a></li>
+                    <li><a class="linkedtext" href="#embedded-systems">1.1.3 Embedded Systems</a></li>
+                    </ul>
+                    </li>
             </ul>
         </div>
     </div>
