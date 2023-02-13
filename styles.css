@@ -19,6 +19,26 @@ blockquote {
     width: 100%;
 }
 
+.dropdown {
+    display: inline-block;
+    overflow: hidden;
+}
+  
+.dropdown-content{
+    font-size: 0.8em;
+    display: none;
+    position: relative;
+    z-index: 1;
+}
+
+.dropdown-content a{
+    position: relative;
+    width: inherit;
+    background-color: #eeeeee;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
 .navbar a {
     float: left;
     display: block;
@@ -42,7 +62,7 @@ blockquote {
     display: inline-block;
     text-align: center;
     font-size: 4em;
-    font-weight: bold;
+    font-weight: 500;
 } 
 
 .subtxt {
@@ -52,7 +72,7 @@ blockquote {
     display: inline-block;
     text-align: center;
     font-size: 3em;
-    font-weight: bold;
+    font-weight: 500;
 } 
 
 
@@ -120,26 +140,50 @@ blockquote {
 
 h1 {
     font-size: 3.5em;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 h2 {
     font-size: 2em;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 h3 {
     font-size: 1.5em;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 h4 {
     font-size: 1.3em;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 ul {
     padding-left: 3em
+}
+
+td {
+    border-top: 1px solid #dcdcdc;
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+td, th {
+    border-right: 1px solid #dcdcdc;
+    padding: 8px 12px;
+}
+
+td:last-child, th:last-child {
+    border-right: 0;
+}
+
+tr {
+    display: table-row;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 .kontent {

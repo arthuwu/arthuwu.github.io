@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>OCR J277 Paper 1</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
 </head>
 <body>
     <nav class="navbar">
-        <a href="/index.html">arthuwu</a>
-        <a href="/computersci.html">Computer Science</a>
+        <a href="/">arthuwu</a>
+        <div class="dropdown">
+            <a class="dropdown" href="/computersci.html">Computer Science</a>
+            <div class="dropdown-content">
+                <a href="/paperone.html">Paper 1 (Computer Systems)</a>
+            </div>
+        </div>
     </nav>
     <div class="flex-container-double content">
         <div class="kontent">  
@@ -225,17 +230,193 @@
             <blockquote>
             <p>why BIOSes and I/O handling are not included in here i do not know</p>
             </blockquote>
+            <h1 id="system-architecture-1">1.2 - System Architecture</h1>
+            <h2 id="primary-storage-memory">1.2.1 Primary Storage (Memory)</h2>
+            <p>Memory is the component in the computer responsible for <strong>storing data, programs and instructions which are currently in use</strong>.<br>
+            It is <strong>used</strong> for data/instructions which are</p>
+            <ul>
+            <li>currently “in use”, but not being “executed”</li>
+            </ul>
+            <p>It is <strong>needed</strong> because</p>
+            <ul>
+            <li>Secondary storage is slow</li>
+            </ul>
+            <p>It <strong>can</strong>:</p>
+            <ul>
+            <li>be read from</li>
+            <li>be written to (RAM only)</li>
+            <li><strong>not</strong> store programs and data when the system is powered off (RAM only)</li>
+            </ul>
+            <p>There are 2 types of primary memory: <strong>Random Access Memory (RAM)</strong> and <strong>Read-only Memory (ROM)</strong>.</p>
+            <h3 id="random-access-memory"><strong>Random Access Memory</strong></h3>
+            <ul>
+            <li>Used to hold <strong>data and instructions currently in use</strong>
+            <ul>
+            <li>Programs are copied to the RAM when they are opened, and deleted from it when they are closed</li>
+            </ul>
+            </li>
+            <li><strong>Volatile</strong> - power is required to retain data</li>
+            <li>Data can be <strong>accessed from any location</strong> in the memory, i.e <strong>random access</strong></li>
+            </ul>
+            <blockquote>
+            <p>There are 2 main types of RAM: S(tatic)RAM and D(ynamic)RAM. DRAM has to be continuously refreshed while SRAM does not. SRAM is mainly used in cache memory, due to it’s better performance and lower power usage. However, DRAM has higher density which means it is capable of higher capacity</p>
+            </blockquote>
+            <h3 id="read-only-memory"><strong>Read-only Memory</strong></h3>
+            <ul>
+            <li>Used to hold <strong>instructions and data a computer requires to run</strong>, for example the <strong>BIOS (Basic Input Output System)</strong> and the <strong>bootstrap</strong>.</li>
+            <li><strong>Non-volatile</strong> - power is <strong>not</strong> required to retain data</li>
+            <li>Data can only be read from, and not written to</li>
+            </ul>
+            <blockquote>
+            <p>“actual”, hard-wired ROM is rarely used nowadays. Erasable Programmable (EPROM) and Electrically Erasable Programmable (EEPROM) read-only memory, which can be “flashed” to reprogram, are much more common.</p>
+            </blockquote>
+            <h3 id="virtual-memory"><strong>Virtual Memory</strong></h3>
+            <ul>
+            <li>Virtual memory is the <strong>use of secondary storage as primary memory</strong></li>
+            <li>Used when the amount of RAM needed is greater than the amount of physical RAM available to the computer
+            <ul>
+            <li>When this occurs, data not currently being used by the CPU is transferred to secondary storage, and data currently being used is transferred to the RAM. This is known as <strong>swapping</strong>.</li>
+            <li>As you may expect, this causes the secondary storage to <strong>excessively read and write</strong>, leading to slower acess speeds. This is known as <strong>disk thrashing</strong>.</li>
+            </ul>
+            </li>
+            </ul>
+            <h2 id="secondary-storage">1.2.2 Secondary Storage</h2>
+            <p><strong>Secondary storage</strong> is <strong>non volatile</strong>, long-term storage.<br>
+            It is <strong>used</strong> for data/instructions which are</p>
+            <ul>
+            <li>not currently in use</li>
+            <li>to be stored indefinitely</li>
+            </ul>
+            <p>It is <strong>needed</strong> because</p>
+            <ul>
+            <li>RAM is volatile</li>
+            <li>ROM is read-only</li>
+            </ul>
+            <p>It <strong>can</strong>:</p>
+            <ul>
+            <li>be written to and read from</li>
+            <li>store both data and instructions, even when the system is powered off</li>
+            </ul>
+            <p>There are many forms of secondary storage, each with its own set of characteristics.<br>
+            We will mainly focus on:</p>
+            <ul>
+            <li><strong>Cost</strong>
+            <ul>
+            <li>How much somebody needs to pay to purchase/operate/maintain the storage medium</li>
+            </ul>
+            </li>
+            <li><strong>Capacity</strong>
+            <ul>
+            <li>How much data can be stored in the storage medium</li>
+            <li>Bit/Byte/KB/MB/GB/TB etc.</li>
+            </ul>
+            </li>
+            <li><strong>Speed of access</strong>
+            <ul>
+            <li>How fast can the data be accessed in the storage medium</li>
+            <li>KB/s, GB/s etc.</li>
+            </ul>
+            </li>
+            <li><strong>Portability</strong>
+            <ul>
+            <li>How portable is the medium? Is it small and easy to carry?</li>
+            </ul>
+            </li>
+            <li><strong>Durability</strong>
+            <ul>
+            <li>How durable is the medium? Does it break easily?</li>
+            </ul>
+            </li>
+            <li><strong>Reliability</strong>
+            <ul>
+            <li>How reliable is the medium? Does it stop working frequently?</li>
+            </ul>
+            </li>
+            </ul>
+            <blockquote>
+            <p>In your exam, it is important to give most if not all of these factors when comparing 2 storage mediums</p>
+            </blockquote>
+            <ul>
+            <li>Some devices, e.g. <strong>embedded systems</strong> do not need to have data stored in secondary storage to operate.</li>
+            </ul>
+            <br>
+            <table>
+            <thead>
+            <tr>
+            <th>Characteristic</th>
+            <th>Magnetic</th>
+            <th>Optical</th>
+            <th>Solid-state</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>How it works</td>
+            <td>A write/read head moves across the surface of a spinning metal “platter”. To write data, it magnetises (1) or demagnetises (0) tiny sections of the platter.</td>
+            <td>A laser beam scans the surface of the optical “disk”, which has “tracks” of flat areas (lands) and pits (hollows). If light is reflected (lands), 1 is registered. If no light bounces back (hollows), 0 is registered.</td>
+            <td>Electrons are stored in floating gates (usually NAND gates), bound between oxide layers. TRUE returns 1, and FALSE returns 0</td>
+            </tr>
+            <tr>
+            <td>Types</td>
+            <td>- <strong>Internal</strong> Hard Disk Drive (HDD) <br> - <strong>External</strong> HDD <br> - Floppy disk</td>
+            <td>- Compact Disk (<strong>CD</strong>) - ROM/RW <br> - Digital Video Disk (<strong>DVD</strong>) - ROM/RW <br> - <strong>Blu-ray</strong> - ROM/RW</td>
+            <td>- <strong>USB Thumb Drive</strong> <br> - Solid State Drive (<strong>SSD</strong>)</td>
+            </tr>
+            <tr>
+            <td>Cost</td>
+            <td>Cheapest</td>
+            <td>Cheap</td>
+            <td><strong>More expensive</strong></td>
+            </tr>
+            <tr>
+            <td>Capacity</td>
+            <td><strong>Largest</strong> (500GB - 12+ TB)</td>
+            <td>Small (640MB (CD), 4.7GB (DVD), 50GB (Blu-ray))</td>
+            <td>Large (2GB (thumb drives) - 8TB)</td>
+            </tr>
+            <tr>
+            <td>Speed of access</td>
+            <td>Slow</td>
+            <td>Very slow</td>
+            <td><strong>Very fast</strong> <br> - Limited by protocol used to connect to device</td>
+            </tr>
+            <tr>
+            <td>Portability</td>
+            <td>Least <br> - Large and heavy</td>
+            <td>More <br> - Thin and light <br> - Easy to break</td>
+            <td><strong>Most</strong> <br> - Small and light</td>
+            </tr>
+            <tr>
+            <td>Durability</td>
+            <td>Resonable</td>
+            <td>Poor</td>
+            <td><strong>Most</strong></td>
+            </tr>
+            <tr>
+            <td>Reliability</td>
+            <td>Good</td>
+            <td>Good</td>
+            <td>Good</td>
+            </tr>
+            </tbody>
+            </table>
             <!-- stop pasting here and don't spend 30 minutes debugging like past you -->
         </div>
         <div class="table-of-contents flex-right">
             <ul class="fixed-position">
-                    <li><a class="linkedtext" href="#system-architecture">1.1 - System Architecture</a>
+                <li><a class="linkedtext" href="#system-architecture">1.1 - System Architecture</a>
                     <ul>
                     <li><a class="linkedtext" href="#architecture-of-the-cpu">1.1.1 Architecture of the CPU</a></li>
                     <li><a class="linkedtext" href="#cpu-performance">1.1.2 CPU performance</a></li>
                     <li><a class="linkedtext" href="#embedded-systems">1.1.3 Embedded Systems</a></li>
                     </ul>
-                    </li>
+                </li>
+                <li><a class="linkedtext" href="#system-architecture-1">1.2 - System Architecture</a>
+                    <ul>
+                    <li><a class="linkedtext" href="#primary-storage-memory">1.2.1 Primary Storage (Memory)</a></li>
+                    <li><a class="linkedtext" href="#secondary-storage">1.2.2 Secondary Storage</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
