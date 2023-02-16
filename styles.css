@@ -9,51 +9,105 @@ blockquote {
     color: rgba(0,0,0,.5);
     padding-left: 1.5em;
     border-left: 5px solid rgba(0,0,0,.1);
+    margin-bottom: 0.6em;
+    margin-top: 0.6em;
 }
+
+strong {
+    font-weight: 600;
+}
+
+pre > code {
+    background-color: rgba(0,0,0,.05);
+    display: block;
+    padding: 1em;
+    overflow-x: auto;
+    white-space: pre;
+    border-radius: 10px;
+    line-height: 1.7em;
+    font-size: 1.2em;
+    font-family: monospace;
+    margin-bottom: 0.6em;
+    margin-top: 0.8em;
+}
+
+.py-keyword {
+    font-size: inherit;
+    font-family: monospace;
+    color: #07a;
+}
+
+.py-function {
+    font-size: inherit;
+    font-family: monospace;
+    color: #dd4a68;
+}
+
+.py-punctuation {
+    font-size: inherit;
+    font-family: monospace;
+    color: #999;
+}
+
+.py-operator {
+    font-size: inherit;
+    font-family: monospace;
+    color: #a67f59;
+}
+
+.py-builtin {
+    font-size: inherit;
+    font-family: monospace;
+    color: #690;
+}
+
+.py-number {
+    font-size: inherit;
+    font-family: monospace;
+    color: #905;
+}
+
 
 .navbar {
     background: #ffffff;
-    overflow: hidden;
+    display:block;
     position: fixed;
     top: 0;
     width: 100%;
 }
 
-.dropdown {
-    display: inline-block;
-    overflow: hidden;
-}
-  
-.dropdown-content{
-    font-size: 0.8em;
-    display: none;
-    position: relative;
-    z-index: 1;
-}
-
-.dropdown-content a{
-    position: relative;
-    width: inherit;
-    background-color: #eeeeee;
-}
-
-.dropdown:hover .dropdown-content {display: block;}
-
 .navbar a {
     float: left;
-    display: block;
     color: #000000;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 1.5em;
-  }
+}
 
 .navbar a:hover {
     background: #ddd;
     color: #000000;
-  }
-  
+}
+
+.dropdown {
+    position: relative !important;
+    display: inline-block !important;
+}
+
+
+.dropdown-content {
+    font-size: 0.8em;
+    display: none;
+    position: absolute !important;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 99  !important;
+    top: 100% !important;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
 
 .homepg {
     margin-top: 300px; 
@@ -141,21 +195,34 @@ blockquote {
 h1 {
     font-size: 3.5em;
     font-weight: 500;
+    margin-bottom: 0.8em;
+    margin-top: 0.8em;
 }
 
 h2 {
     font-size: 2em;
     font-weight: 500;
+    margin-bottom: 0.8em;
+    margin-top: 0.8em;
 }
 
 h3 {
     font-size: 1.5em;
     font-weight: 500;
+    margin-bottom: 0.8em;
+    margin-top: 0.8em;
 }
 
 h4 {
     font-size: 1.3em;
     font-weight: 500;
+    margin-bottom: 0.8em;
+    margin-top: 0.8em;
+}
+
+table {
+    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 ul {

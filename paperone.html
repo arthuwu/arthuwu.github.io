@@ -12,7 +12,7 @@
     <nav class="navbar">
         <a href="/">arthuwu</a>
         <div class="dropdown">
-            <a class="dropdown" href="/computersci.html">Computer Science</a>
+            <a href="/computersci.html">Computer Science</a>
             <div class="dropdown-content">
                 <a href="/paperone.html">Paper 1 (Computer Systems)</a>
             </div>
@@ -33,13 +33,13 @@
             </ul>
             <h3 id="von-neumann-architecture"><strong>Von-Neumann Architecture</strong></h3>
             <blockquote>
-            <p>In GCSE, you do not need to know about other CPU architecures.</p>
+            <p>In GCSE, you do not need to know about other CPU architecture.</p>
             </blockquote>
             <ul>
             <li>Both <strong>instructions and data are stored in the same memory</strong></li>
             </ul>
             <blockquote>
-            <p>In contrast, the Harvard architecure uses seperate memory for instructions and data</p>
+            <p>In contrast, the Harvard architecture uses seperate memory for instructions and data</p>
             </blockquote>
             <p>There are several different components in a CPU, including <strong>Registers</strong>, the <strong>Arithmetic Logic Unit (ALU)</strong>, the <strong>Control Unit (CU)</strong>, <strong>buses</strong> and <strong>cache</strong>.</p>
             <blockquote>
@@ -230,7 +230,7 @@
             <blockquote>
             <p>why BIOSes and I/O handling are not included in here i do not know</p>
             </blockquote>
-            <h1 id="system-architecture-1">1.2 - System Architecture</h1>
+            <h1 id="memory-and-storage">1.2 - Memory and storage</h1>
             <h2 id="primary-storage-memory">1.2.1 Primary Storage (Memory)</h2>
             <p>Memory is the component in the computer responsible for <strong>storing data, programs and instructions which are currently in use</strong>.<br>
             It is <strong>used</strong> for data/instructions which are</p>
@@ -337,9 +337,10 @@
             <p>In your exam, it is important to give most if not all of these factors when comparing 2 storage mediums</p>
             </blockquote>
             <ul>
-            <li>Some devices, e.g. <strong>embedded systems</strong> do not need to have data stored in secondary storage to operate.</li>
+            <li>Some devices, e.g. <strong>embedded systems</strong> do not need to have data stored in secondary storage to operate.<br>
+            <br></li>
             </ul>
-            <br>
+            
             <table>
             <thead>
             <tr>
@@ -358,9 +359,9 @@
             </tr>
             <tr>
             <td>Types</td>
-            <td>- <strong>Internal</strong> Hard Disk Drive (HDD) <br> - <strong>External</strong> HDD <br> - Floppy disk</td>
+            <td>- <strong>Internal</strong> Hard Disk Drive (HDD) <br> - <strong>External</strong> HDD <br> - Floppy disk <br> - Magnetic tape</td>
             <td>- Compact Disk (<strong>CD</strong>) - ROM/RW <br> - Digital Video Disk (<strong>DVD</strong>) - ROM/RW <br> - <strong>Blu-ray</strong> - ROM/RW</td>
-            <td>- <strong>USB Thumb Drive</strong> <br> - Solid State Drive (<strong>SSD</strong>)</td>
+            <td>- <strong>USB Thumb Drive</strong> <br> - Solid State Drive (<strong>SSD</strong>) <br> - SD cards</td>
             </tr>
             <tr>
             <td>Cost</td>
@@ -398,23 +399,843 @@
             <td>Good</td>
             <td>Good</td>
             </tr>
+            <tr>
+            <td>Common uses</td>
+            <td>Backups/archives of large files, Long-term storage of programs and data</td>
+            <td>Distributing games or media, Transferring files, Archives</td>
+            <td>Transferring files between computers (USB drives), Long-term storage of programs and data where performance is a factor</td>
+            </tr>
             </tbody>
-            </table>
+            </table><h2 id="units">1.2.3 Units</h2>
+            <p>In a computer system, all <strong>data is stored in binary</strong>, i.e. 0 and 1.<br>
+            One binary “digit” is known as a <strong>bit</strong>. It is the <strong>smallest</strong> unit used to describe size or capacity.</p>
+            <p><strong>4 bits</strong> is a <strong>nibble</strong><br>
+            <strong>8 bits</strong> is a <strong>byte</strong></p>
+            <p>Each <strong>larger</strong> “byte unit” can be calculated by <strong>multiplying by 1000</strong><br>
+            Each <strong>smaller</strong> “byte unit” can be calculated by <strong>dividing by 1000</strong></p>
+            <blockquote>
+            <p>REMEMBER TO MULTIPLY/DIVIDE BY 8 FOR BYTE</p>
+            </blockquote>
+
+            <table>
+            <thead>
+            <tr>
+            <th>Size</th>
+            <th>Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>1 binary digit</td>
+            <td>bit (b)</td>
+            </tr>
+            <tr>
+            <td>4 b</td>
+            <td>nibble</td>
+            </tr>
+            <tr>
+            <td>8 b</td>
+            <td>byte (B)</td>
+            </tr>
+            <tr>
+            <td>1000 B</td>
+            <td>kilobyte (KB)</td>
+            </tr>
+            <tr>
+            <td>1000 KB</td>
+            <td>megabyte (MB)</td>
+            </tr>
+            <tr>
+            <td>1000 MB</td>
+            <td>gigabyte (GB)</td>
+            </tr>
+            <tr>
+            <td>1000 GB</td>
+            <td>terabyte (TB)</td>
+            </tr>
+            <tr>
+            <td>1000 TB</td>
+            <td>petabyte (PB)</td>
+            </tr>
+            </tbody>
+            </table><blockquote>
+            <p>Most operating systems display KiB as KB, GiB as GB, etc. even though they are not equal.<br>
+            KiB (Kibibiyte) = 1024B, MiB (Mebibyte) = 1024 KiB, etc.<br>
+            However, in your exam, both powers of 1000 and 1024 can be used.</p>
+            </blockquote>
+            <h3 id="analogue-data-and-digital-data">Analogue data and digital data</h3>
+            <p>Analogue data is data that <strong>can be physically represented</strong>. It can vary greatly in value.</p>
+            <ul>
+            <li><strong>Sound waves</strong></li>
+            <li><strong>Pressure</strong></li>
+            <li><strong>Temperature</strong></li>
+            </ul>
+            <p>are all examples of analogue data.</p>
+            <p>Computers <strong>cannot process analogue data</strong>, so they must be converted to digital data in order to be read or modified. This is done by Analogue-to-digital (<strong>ADC</strong>) converters, which takes <strong>samples</strong> of data and converts them to digital signals. Digital-to-analogue (<strong>DAC</strong>) converters work in the opposite manner, where data is converted from digital signals to <strong>analogue signals that humans can recieve</strong>.</p>
+            <p>We will cover this in more detail in <strong>1.2.4</strong></p>
+            <blockquote>
+            <p>The OCR specification is really weird - it wants you to learn about how to calculate file sizes in this sub-topic when they should really be in 1.2.4</p>
+            </blockquote>
+            <h2 id="data-storage">1.2.4 Data Storage</h2>
+            <blockquote>
+            <p>This is going to be one hefty topic</p>
+            </blockquote>
+            <h3 id="number-systems">Number systems</h3>
+            <p>There are several different number systems. In GCSE, you will need to know about 3:</p>
+            <ul>
+            <li><strong>Binary</strong>
+            <ul>
+            <li><strong>2</strong> values per “digit”
+            <ul>
+            <li>0 or 1</li>
+            </ul>
+            </li>
+            <li>1 bit</li>
+            <li>Base-2</li>
+            <li>In GCSE, you only have to learn binary values up to 1 byte (8 bits).</li>
+            </ul>
+            </li>
+            </ul>
+            
+            <table>
+            <thead>
+            <tr>
+            <th>2<sup>0</sup></th>
+            <th>2<sup>1</sup></th>
+            <th>2<sup>2</sup></th>
+            <th>2<sup>3</sup></th>
+            <th>2<sup>4</sup></th>
+            <th>2<sup>5</sup></th>
+            <th>2<sup>6</sup></th>
+            <th>2<sup>7</sup></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>4</td>
+            <td>8</td>
+            <td>16</td>
+            <td>32</td>
+            <td>64</td>
+            <td>128</td>
+            </tr>
+            </tbody>
+            </table><ul>
+            <li><strong>Denary</strong> (decimal)
+            <ul>
+            <li><strong>10</strong> values per “digit”
+            <ul>
+            <li>0 - 9</li>
+            </ul>
+            </li>
+            <li>Base-10</li>
+            <li>1 byte gives <strong>255 denary values</strong></li>
+            </ul>
+            </li>
+            </ul>
+            
+            <table>
+            <thead>
+            <tr>
+            <th>0</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>0000</td>
+            <td>0001</td>
+            <td>0010</td>
+            <td>0011</td>
+            <td>0100</td>
+            <td>0101</td>
+            <td>0110</td>
+            <td>0111</td>
+            <td>1000</td>
+            <td>1001</td>
+            </tr>
+            </tbody>
+            </table><ul>
+            <li><strong>Hexadecimal</strong> (hex)
+            <ul>
+            <li><strong>16</strong> values per “digit”
+            <ul>
+            <li>0-9. A-F</li>
+            </ul>
+            </li>
+            <li>1 nibble (4 bits)</li>
+            <li>Base-16</li>
+            <li>Used in MAC and IPv6 addresses</li>
+            </ul>
+            </li>
+            </ul>
+            
+            <table>
+            <thead>
+            <tr>
+            <th>0</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th>D</th>
+            <th>E</th>
+            <th>F</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            </tr>
+            <tr>
+            <td>0000</td>
+            <td>0001</td>
+            <td>0010</td>
+            <td>0011</td>
+            <td>0100</td>
+            <td>0101</td>
+            <td>0110</td>
+            <td>0111</td>
+            <td>1000</td>
+            <td>1001</td>
+            <td>1010</td>
+            <td>1011</td>
+            <td>1100</td>
+            <td>1101</td>
+            <td>1110</td>
+            <td>1111</td>
+            </tr>
+            </tbody>
+            </table><blockquote>
+            <p>The OCR specification only calls for conversion between 8 binary digits, 255 denary digits and 2 hexadecimal digits.</p>
+            </blockquote>
+            <h3 id="conversions">Conversions</h3>
+            <ul>
+            <li><strong>Binary</strong> to <strong>Denary</strong>
+            <ul>
+            <li>Draw a table:
+            <ul>
+            <li>Top row: powers of 2 up to 2<sup>7</sup></li>
+            <li>Middle row: the given binary number</li>
+            <li>Bottom row: the value of the column with “1”</li>
+            </ul>
+            </li>
+            <li>Add the results of the bottom row</li>
+            </ul>
+            </li>
+            </ul>
+            <p>e.g. Converting binary 01101011 to denary</p>
+            
+            <table>
+            <thead>
+            <tr>
+            <th>128</th>
+            <th>64</th>
+            <th>32</th>
+            <th>16</th>
+            <th>8</th>
+            <th>4</th>
+            <th>2</th>
+            <th>1</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            </tr>
+            <tr>
+            <td>-</td>
+            <td>64</td>
+            <td>32</td>
+            <td>-</td>
+            <td>8</td>
+            <td>-</td>
+            <td>2</td>
+            <td>1</td>
+            </tr>
+            </tbody>
+            </table><p>64 + 32 + 8 + 2 + 1 = 107<br>
+            01101011 = 107</p>
+            <ul>
+            <li><strong>Denary</strong> to <strong>Binary</strong>
+            <ul>
+            <li>Take away each power of 2, starting from 2<sup>7</sup>. If the result is larger than or equal to 0, the bit is 1. Keep the value and subtract the next power of 2. If the result is smaller than 0, the bit is 0. Use the last result to subtract the next power of 2.</li>
+            </ul>
+            </li>
+            </ul>
+            <pre><code><span class="py-keyword">def</span> <span class="py-function">denarytobinary</span><span class="py-punctuation">(</span>denary<span class="py-punctuation">)</span><span class="py-punctuation">:</span>
+                binary <span class="py-operator">=</span> <span class="py-punctuation">[</span><span class="py-punctuation">]</span>
+                <span class="py-keyword">for</span> i <span class="py-keyword">in</span> <span class="py-builtin">reversed</span><span class="py-punctuation">(</span><span class="py-builtin">range</span><span class="py-punctuation">(</span><span class="py-number">8</span><span class="py-punctuation">)</span><span class="py-punctuation">)</span><span class="py-punctuation">:</span>   
+                    <span class="py-keyword">if</span> denary <span class="py-operator">-</span> <span class="py-number">2</span><span class="py-operator">**</span>i <span class="py-operator">&gt;=</span> <span class="py-number">0</span><span class="py-punctuation">:</span>
+                        binary<span class="py-punctuation">.</span>append<span class="py-punctuation">(</span><span class="py-number">1</span><span class="py-punctuation">)</span>
+                        denary <span class="py-operator">=</span> denary <span class="py-operator">-</span> <span class="py-number">2</span><span class="py-operator">**</span>i
+                    <span class="py-keyword">else</span><span class="py-punctuation">:</span>
+                        binary<span class="py-punctuation">.</span>append<span class="py-punctuation">(</span><span class="py-number">0</span><span class="py-punctuation">)</span>
+                <span class="py-keyword">return</span> binary</code></pre>
+            <p>e.g. Converting denary 107 to binary</p>
+            
+            <table>
+            <thead>
+            <tr>
+            <th>Subtraction</th>
+            <th>Result</th>
+            <th>Bit</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>107 - 128</td>
+            <td>-21</td>
+            <td>0</td>
+            </tr>
+            <tr>
+            <td>107 - 64</td>
+            <td>43</td>
+            <td>1</td>
+            </tr>
+            <tr>
+            <td>43 - 32</td>
+            <td>11</td>
+            <td>1</td>
+            </tr>
+            <tr>
+            <td>11 - 16</td>
+            <td>-5</td>
+            <td>0</td>
+            </tr>
+            <tr>
+            <td>11 - 8</td>
+            <td>3</td>
+            <td>1</td>
+            </tr>
+            <tr>
+            <td>3 - 4</td>
+            <td>-1</td>
+            <td>0</td>
+            </tr>
+            <tr>
+            <td>3 - 2</td>
+            <td>1</td>
+            <td>1</td>
+            </tr>
+            <tr>
+            <td>1 - 1</td>
+            <td>0</td>
+            <td>1</td>
+            </tr>
+            </tbody>
+            </table><p>107 = 01101011</p>
+            <ul>
+            <li><strong>Denary</strong> to <strong>Hexadecimal</strong>
+            <ul>
+            <li>Each hex place is a power of 16.</li>
+            <li>If the denary number is larger than 16, divide it by 16.
+            <ul>
+            <li>Take the hex of the integer result - this is the 1st digit</li>
+            <li>Take the hex of the integer remainder - this is the 2nd digit.</li>
+            </ul>
+            </li>
+            <li>If the denary number is smaller than 16
+            <ul>
+            <li>Take the hex of the denary number - this is the 2nd digit</li>
+            <li>The first digit should be 0</li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            <p>e.g. Converting denary 17 to hexadecimal</p>
+            
+            <table>
+            <thead>
+            <tr>
+            <th>Division</th>
+            <th>Result</th>
+            <th>Hex</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>17 / 16</td>
+            <td>1 … 1</td>
+            <td>1</td>
+            </tr>
+            <tr>
+            <td>-</td>
+            <td>1</td>
+            <td>1</td>
+            </tr>
+            </tbody>
+            </table><p>Denary 17 = Hex 11</p>
+            <ul>
+            <li><strong>Hexadecimal</strong> to <strong>Denary</strong>
+            <ul>
+            <li>Take the 1st digit of the hexadecimal and multiply it by 16</li>
+            <li>Take the 2nd digit of the hexadecimal and multiply it by 1</li>
+            <li>Add the 2 results together</li>
+            </ul>
+            </li>
+            </ul>
+            <p>e.g. Converting hexadecimal 11 to denary</p>
+            
+            <table>
+            <thead>
+            <tr>
+            <th>Hex</th>
+            <th>Multiplication</th>
+            <th>Sum</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>1</td>
+            <td>1 * 16</td>
+            <td>16</td>
+            </tr>
+            <tr>
+            <td>1</td>
+            <td>1 * 1</td>
+            <td>17</td>
+            </tr>
+            </tbody>
+            </table><p>Hex 11 = Denary 17</p>
+            <ul>
+            <li><strong>Binary</strong> to <strong>Hexadecimal</strong>
+            <ul>
+            <li>Split the binary digits into groups of 4</li>
+            <li>Convert the first 4 digits to denary, then convert to hexadecimal</li>
+            <li>Convert the last 4 digits to denary, then to hexadecimal</li>
+            <li><strong>Concatenate</strong> the two results</li>
+            </ul>
+            </li>
+            </ul>
+            <p>e.g. 01101011 to hexadecimal</p>
+            
+            <table>
+            <thead>
+            <tr>
+            <th>Step</th>
+            <th>Value</th>
+            <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>Split</td>
+            <td>0110</td>
+            <td>1011</td>
+            </tr>
+            <tr>
+            <td>Convert to Denary</td>
+            <td>6</td>
+            <td>11</td>
+            </tr>
+            <tr>
+            <td>Convert to Hex</td>
+            <td>6</td>
+            <td>B</td>
+            </tr>
+            </tbody>
+            </table><p>01101011 = Hex 6B</p>
+            <ul>
+            <li><strong>Hexadecmial</strong> to <strong>Binary</strong>
+            <ul>
+            <li>Convert the first digit to denary, then convert to binary</li>
+            <li>Convert the last digit  to denary, then convert to binary</li>
+            <li><strong>Concatenate</strong> the two results</li>
+            </ul>
+            </li>
+            </ul>
+            <p>e.g. Hexadecimal 6B to binary</p>
+            
+            <table>
+            <thead>
+            <tr>
+            <th>Step</th>
+            <th>Value</th>
+            <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>Split</td>
+            <td>6</td>
+            <td>B</td>
+            </tr>
+            <tr>
+            <td>Convert to Denary</td>
+            <td>6</td>
+            <td>11</td>
+            </tr>
+            <tr>
+            <td>Convert to Binary</td>
+            <td>0110</td>
+            <td>1011</td>
+            </tr>
+            </tbody>
+            </table><p>Hex 6B = 01101011</p>
+            <h3 id="binary-calculations">Binary Calculations</h3>
+            <ul>
+            <li>
+            <p><strong>Addition</strong><br>
+            There are <strong>4 basic rules</strong> to binary addition:</p>
+            <ul>
+            <li>0 + 0 = 0</li>
+            <li>1 + 0 = 1</li>
+            <li>1 + 1 = 0, <strong>carry</strong> 1</li>
+            <li>1 + 1 + 1 = 1, <strong>carry</strong> 1</li>
+            </ul>
+            </li>
+            <li>
+            <p><strong>Overflow</strong> occurs when the result of a calculation requires more bits than are in the available range.</p>
+            <ul>
+            <li>e.g. 11111110 + 00000010 = 0000000 overflow 1
+            <ul>
+            <li>This will return denary 0 - causing a error</li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            <li>
+            <p><strong>Binary Shift</strong></p>
+            <ul>
+            <li>
+            <p><strong>Multiplication</strong></p>
+            <ul>
+            <li>To multiply a binary number, <strong>shift</strong> all digits to the <strong>left</strong> and fill the gaps with 0.
+            <ul>
+            <li>x 2 -&gt; left 1</li>
+            <li>x 4 -&gt; left 2</li>
+            <li>x 8 -&gt; left 3</li>
+            <li>etc.</li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            <li>
+            <p><strong>Division</strong></p>
+            <ul>
+            <li>To divide a binary number, <strong>shift</strong> all digits to the <strong>right</strong> and fill the gaps with 0.
+            <ul>
+            <li>/ 2 -&gt; right 1</li>
+            <li>/ 4 -&gt; right 2</li>
+            <li>/ 8 -&gt; right 3</li>
+            <li>etc.</li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            <p>e.g. 00011010 (denary 26) x 4 / 8</p>
+            
+            <table>
+            <thead>
+            <tr>
+            <th>Original</th>
+            <th>0</th>
+            <th>0</th>
+            <th>0</th>
+            <th>1</th>
+            <th>1</th>
+            <th>0</th>
+            <th>1</th>
+            <th>0</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>Left 2</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            </tr>
+            </tbody>
+            </table><p>01101000 = 104<br>
+            26 x 4 = 104</p>
+            
+            <table>
+            <thead>
+            <tr>
+            <th>Original</th>
+            <th>0</th>
+            <th>1</th>
+            <th>1</th>
+            <th>0</th>
+            <th>1</th>
+            <th>0</th>
+            <th>0</th>
+            <th>0</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>Right 3</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            </tr>
+            </tbody>
+            </table><p>00001101 = 13<br>
+            104 / 8 = 13</p>
+            <blockquote>
+            <p><strong>Signed binary and subtraction</strong></p>
+            <ul>
+            <li>This is not taught at GCSE, but may be beneficial to know</li>
+            </ul>
+            <p><strong>Signed Binary</strong></p>
+            <ul>
+            <li>The leftmost (“biggest”) digit of a binary string is negative, i.e. -128</li>
+            <li>If the number is positive, the leftmost digit will be 0, and vice versa</li>
+            <li>There are still 255 possible values in a 8-bit integer, from -128 to 127</li>
+            <li>To convert a positive integer to a negative, take the values from the right up to and including the first “1”, then invert the rest.</li>
+            </ul>
+            <p><strong>Subtraction</strong></p>
+            <ul>
+            <li>Using <strong>2’s complement</strong>:</li>
+            <li>Convert the integer to be subtracted into a negative signed binary.</li>
+            <li>Do binary addition</li>
+            <li>Using <strong>borrowing</strong>:</li>
+            <li>0 - 0 = 0</li>
+            <li>1 - 0 = 1</li>
+            <li>1 - 1 = 0</li>
+            <li>0 - 1 = 1 (borrow 1)</li>
+            </ul>
+            </blockquote>
+            <h3 id="check-digits">Check digits</h3>
+            <ul>
+            <li>An <strong>extra value</strong> transmitted to check for <strong>errors</strong> in the data.</li>
+            <li>The value of the check digit is usually <strong>calculated from the other values</strong> being sent.
+            <ul>
+            <li>There are 2 main types:
+            <ul>
+            <li><strong>Partity bits</strong>
+            <ul>
+            <li>Adds a value to a binary string to make the number of "1"s <strong>even or odd</strong></li>
+            </ul>
+            </li>
+            <li><strong>Check digits</strong>
+            <ul>
+            <li>There are many ways to implement this, e.g.
+            <ul>
+            <li>EAN8 barcode system:
+            <ul>
+            <li>Adding the sum of the odd-position numbers multiplied by 3</li>
+            <li>Adding the remaining digits</li>
+            <li>Dividing by 10</li>
+            <li>Subtracting the remainder from 10</li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            <h3 id="characters">Characters</h3>
+            <blockquote>
+            <p>again, i have no idea why OCR put this here</p>
+            </blockquote>
+            <p>In computers, alphanumeric characters are stored as binary. These sets of characters a computer can use is called a <strong>character set</strong>.</p>
+            <p>There are 3 common character sets:</p>
+            <ul>
+            <li><strong>ASCII</strong> (American Standard Code for Information Interchange)
+            <ul>
+            <li>7 bits, 128 characters
+            <ul>
+            <li>26 upper case letters (65 - 90)</li>
+            <li>26 lower case letters (97 - 122)</li>
+            <li>10 numeric digits</li>
+            <li>32 punctuations and symbols</li>
+            <li>32 printing control codes</li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            <li><strong>Extended ASCII</strong>
+            <ul>
+            <li>8 bits, 256 characters
+            <ul>
+            <li>Includes special accented characters used by European languages</li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            <li><strong>Unicode</strong>
+            <ul>
+            <li>For UTF-8:</li>
+            <li>4 x 8 bits, &gt;65,000 characters
+            <ul>
+            <li>Includes characters used in other languages, e.g. Chinese</li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            <h3 id="images">Images</h3>
+            <p>Images have to be <strong>converted to binary</strong> in order to be processed by a computer.</p>
+            <p>There are 2 main types of images: <strong>bitmap</strong>/raster and <strong>vector graphics</strong><br>
+            <strong>Bitmaps</strong> are constructed by <strong>pixels</strong>.<br>
+            A standard <strong>Visual Display Unit (VDU)</strong> (Monitor) has <strong>1920x1080</strong> pixels.</p>
+            <p><strong>Pixels</strong> are:</p>
+            <ul>
+            <li>The <strong>smallest identifiable area</strong>, or a <strong>single point</strong> of an image or display unit.</li>
+            <li><strong>Pepresented by a binary integer</strong>
+            <ul>
+            <li>The size of this integer is known as the <strong>colour depth</strong></li>
+            </ul>
+            </li>
+            <li>Has a <strong>single colour.</strong></li>
+            </ul>
+            <p><strong>Colour depth</strong> is:</p>
+            <ul>
+            <li>The <strong>number of bits</strong> used to represent each pixel
+            <ul>
+            <li>1 bit colour depth = 2<sup>1</sup> = 2 colours</li>
+            <li>2 bit colour depth = 2<sup>2</sup> = 4 colours</li>
+            <li>3 bit colour depth = 2<sup>3</sup> = 8 colours</li>
+            <li>n bit colour depth = 2<sup>n</sup> colours</li>
+            </ul>
+            </li>
+            <li>Represented in <strong>bits per pixel (bpp)</strong></li>
+            </ul>
+            <p><strong>Image resolution</strong> is:</p>
+            <ul>
+            <li>The <strong>concentration</strong> of pixels within a specific area.</li>
+            <li>In a <strong>digital</strong> image, this is defined by the image width and height
+            <ul>
+            <li><strong>Resolution (px) = Width (px) * Height (px)</strong></li>
+            </ul>
+            </li>
+            <li>In a <strong>physical</strong> image, this is defined by the image width and height, and the area
+            <ul>
+            <li><strong>Resolution (dpi/ppi) = Number of pixels (px) / Area (inch)</strong></li>
+            </ul>
+            </li>
+            </ul>
+            <p><strong>Metadata</strong> is:</p>
+            <ul>
+            <li><strong>"Data about data"</strong></li>
+            <li>Information other than the actual image stored in an image file, e.g.
+            <ul>
+            <li>file type</li>
+            <li>file size</li>
+            <li>date created</li>
+            <li>colour depth</li>
+            <li>camera make/model</li>
+            <li>exposure</li>
+            <li>etc.</li>
+            </ul>
+            </li>
+            <li>Will <strong>increase file size</strong></li>
+            </ul>
+            <p><strong>File size</strong> of a bitmap image can be calculated by:</p>
+            <ul>
+            <li><strong>File size (b) = Width (px) x Height (px) x Colour depth (bpp)</strong> + metadata</li>
+            </ul>
+            <blockquote>
+            <p>When asked to give an answer in bytes, REMEMBER 1 BYTE IS 8 BITS!</p>
+            </blockquote>
+            <h3 id="sound">Sound</h3>
+            <p>Sound is an <strong>analogue signal</strong>. It must be <strong>converted to binary</strong> to be processed by computers.<br>
+            In <strong>analogue</strong> format, sound is presented as <strong>“waves” which change amplitude over time</strong></p>
+            <p><strong>Sampling</strong> is:</p>
+            <ul>
+            <li>When an analogue to digital converter <strong>captures the amplitude of a sound wave</strong>.</li>
+            <li>Each amplitude is known as a <strong>sample</strong>.</li>
+            <li>Done to convert analogue signals to digital.</li>
+            </ul>
+            <p><strong>Sampling frequency</strong> is:</p>
+            <ul>
+            <li>The <strong>time interval</strong> at which samples are captured.</li>
+            <li><strong>44.1KHz</strong>, or 44,100 samples per second, for a <strong>standard</strong> audio file</li>
+            </ul>
+            <p><strong>Sample size</strong> is:</p>
+            <ul>
+            <li>The <strong>number of bits used in each sample</strong></li>
+            <li><strong>larger</strong> sample size &gt; <strong>higher accuracy</strong> in amplitude &gt; <strong>higher quality</strong> sound and <strong>less losses</strong></li>
+            <li><strong>16 or 24 bits</strong>, most commonly</li>
+            </ul>
+            <p><strong>Bit rate</strong> is:</p>
+            <ul>
+            <li>The <strong>number of bits processed per second</strong></li>
+            <li><strong>Bit rate (bps) = Sampling frequency (hz) x Sample size (b)</strong></li>
+            </ul>
+            <p>The <strong>file size</strong> of an audio file can be calculated by:</p>
+            <ul>
+            <li><strong>File size (b) = Sampling frequency (Hz) x Sample size (b) x Audio length (s)</strong></li>
+            </ul>
             <!-- stop pasting here and don't spend 30 minutes debugging like past you -->
         </div>
         <div class="table-of-contents flex-right">
             <ul class="fixed-position">
                 <li><a class="linkedtext" href="#system-architecture">1.1 - System Architecture</a>
                     <ul>
-                    <li><a class="linkedtext" href="#architecture-of-the-cpu">1.1.1 Architecture of the CPU</a></li>
-                    <li><a class="linkedtext" href="#cpu-performance">1.1.2 CPU performance</a></li>
-                    <li><a class="linkedtext" href="#embedded-systems">1.1.3 Embedded Systems</a></li>
+                        <li><a class="linkedtext" href="#architecture-of-the-cpu">1.1.1 Architecture of the CPU</a></li>
+                        <li><a class="linkedtext" href="#cpu-performance">1.1.2 CPU performance</a></li>
+                        <li><a class="linkedtext" href="#embedded-systems">1.1.3 Embedded Systems</a></li>
                     </ul>
                 </li>
-                <li><a class="linkedtext" href="#system-architecture-1">1.2 - System Architecture</a>
+                <li><a class="linkedtext"  href="#memory-and-storage">1.2 - Memory and storage</a>
                     <ul>
-                    <li><a class="linkedtext" href="#primary-storage-memory">1.2.1 Primary Storage (Memory)</a></li>
-                    <li><a class="linkedtext" href="#secondary-storage">1.2.2 Secondary Storage</a></li>
+                        <li><a class="linkedtext" href="#primary-storage-memory">1.2.1 Primary Storage (Memory)</a></li>
+                        <li><a class="linkedtext" href="#secondary-storage">1.2.2 Secondary Storage</a></li>
+                        <li><a class="linkedtext" href="#units">1.2.3 Units</a></li>
+                        <li><a class="linkedtext" href="#data-storage">1.2.4 Data Storage</a></li>
                     </ul>
                 </li>
             </ul>
