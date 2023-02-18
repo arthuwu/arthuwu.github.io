@@ -1219,6 +1219,61 @@
             <ul>
             <li><strong>File size (b) = Sampling frequency (Hz) x Sample size (b) x Audio length (s)</strong></li>
             </ul>
+            <h2 id="compression">1.2.5 Compression</h2>
+            <p><strong>Compression</strong> is <strong>needed</strong> because:</p>
+            <ul>
+            <li><strong>Limited space</strong> in secondary storage</li>
+            <li><strong>Downloads/streaming</strong> take too long</li>
+            <li><strong>File size restrictions</strong> may not be met</li>
+            </ul>
+            <p>There are two main types of compression:</p>
+            <ul>
+            <li>
+            <p><strong>Lossy</strong> compression</p>
+            <ul>
+            <li>Part of the <strong>data is lost</strong>, e.g.
+            <ul>
+            <li>Colour depth</li>
+            <li>Resolution</li>
+            <li>Sampling frequency and size</li>
+            </ul>
+            </li>
+            <li>Common formats include
+            <ul>
+            <li>JPEG (images)</li>
+            <li>MP3 (audio)</li>
+            <li>MPEG (video)</li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            <li>
+            <p><strong>Lossless</strong> compression</p>
+            <ul>
+            <li>Data is <strong>not lost</strong>, which may be useful for <strong>text files</strong>.</li>
+            <li><strong>Less file size reduction</strong> compared to lossy</li>
+            <li>Common formats include
+            <ul>
+            <li>PNG (images)</li>
+            <li>TIFF (images)</li>
+            <li>PDF (documents)</li>
+            </ul>
+            </li>
+            <li><strong>Run-length Encoding (RLE)</strong>
+            <ul>
+            <li>Stores “patterns” of repeating data</li>
+            <li>e.g. 1,0,0,0,1,1,1,1,1,0,0,1 becomes 1, 3<em>0, 5</em>1, 2*0, 1</li>
+            </ul>
+            </li>
+            </ul>
+            <blockquote>
+            <p><strong>Huffman Encoding</strong></p>
+            <ul>
+            <li>Creates a “tree” using the frequency of characters in a string.</li>
+            </ul>
+            </blockquote>
+            </li>
+            </ul>
             <!-- stop pasting here and don't spend 30 minutes debugging like past you -->
         </div>
         <div class="table-of-contents flex-right">
@@ -1236,6 +1291,7 @@
                         <li><a class="linkedtext" href="#secondary-storage">1.2.2 Secondary Storage</a></li>
                         <li><a class="linkedtext" href="#units">1.2.3 Units</a></li>
                         <li><a class="linkedtext" href="#data-storage">1.2.4 Data Storage</a></li>
+                        <li><a class="linkedtext" href="#compression">1.2.5 Compression</a></li>
                     </ul>
                 </li>
             </ul>
