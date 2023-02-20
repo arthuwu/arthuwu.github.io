@@ -771,13 +771,13 @@
             <li>Each hex place is a power of 16.</li>
             <li>If the denary number is larger than 16, divide it by 16.
             <ul>
-            <li>Take the hex of the integer result - this is the 1st digit</li>
-            <li>Take the hex of the integer remainder - this is the 2nd digit.</li>
+            <li>Take the hex of the integer result - this is the leftmost digit</li>
+            <li>Take the hex of the integer remainder - this is the rightmost digit.</li>
             </ul>
             </li>
             <li>If the denary number is smaller than 16
             <ul>
-            <li>Take the hex of the denary number - this is the 2nd digit</li>
+            <li>Take the hex of the denary number - this is the rightmost digit</li>
             <li>The first digit should be 0</li>
             </ul>
             </li>
@@ -810,8 +810,8 @@
             <ul>
             <li><strong>Hexadecimal</strong> to <strong>Denary</strong>
             <ul>
-            <li>Take the 1st digit of the hexadecimal and multiply it by 16</li>
-            <li>Take the 2nd digit of the hexadecimal and multiply it by 1</li>
+            <li>Take the leftmost digit of the hexadecimal and multiply it by 16</li>
+            <li>Take the rightmost digit of the hexadecimal and multiply it by 1</li>
             <li>Add the 2 results together</li>
             </ul>
             </li>
